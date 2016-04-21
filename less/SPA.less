@@ -1,0 +1,215 @@
+@import (reference) "mixins.less";
+@import (reference) "variables.less";
+@import (reference) "fonts/font-awesome.css";
+@font-face {
+    font-family: FontAwesome; /* Имя шрифта */
+    src: url(../fonts/fontawesome-webfont.ttf); /* Путь к файлу со шрифтом */
+    font-family: 'DS StandartCyr', Arial; /* Имя шрифта */
+    src: url(../fonts/dsstnd.ttf); /* Путь к файлу со шрифтом */
+}
+
+html, body {
+	width: 100%;
+	height:100%;
+	background-color: @highlight;
+	z-index: 0;
+}
+
+.wrap {
+	.wrapBasics;
+	position: relative;
+}
+
+
+header {
+	.SPAHeaderStyle();
+
+	.logo {
+		.SPALogoFont();
+	}
+
+	.backHome {
+		.backHomeMixin();
+	}
+}
+
+.underConstruction {
+	color: @accentColor;
+	font-size: 33px;
+	width: 80%;
+	margin-top: 75px;
+	text-align: center;
+		.fa-cogs {
+			padding-right: 20px;
+			color: @mainColor;
+			font-size: 77px;
+		}
+}
+
+.navWrapper {
+	.navWrapperMixin();
+}
+
+.navMask {
+	.leftMask;
+}
+
+.nav {
+    .navBasics;
+    .mainNavBasics;
+    // position: relative;
+}
+
+.mediaDropdown, .mediaDropList {
+	display: none;
+}
+
+.mediaDropdown:first-child {
+	color: @highlight;
+    background: @navGradient;
+    padding-left: 0px;
+}
+	
+
+.mainNavLinks {
+	.mainItems();
+    .gradNavLinks();
+      	&:hover {
+    		.mainNavHov;
+    	}
+		
+		&:focus {
+			.mainNavFocus;
+		}
+
+    	&:active {
+    		.mainNavAct;
+    	} 
+} 
+
+
+
+.content {
+	
+	// .myProfile {
+	
+	.contentMixin();
+		
+	.gallery {
+		.galleryMixin();
+	}
+
+
+	.picIconsGallery {
+		.picIconsMixin();
+	}
+
+	.row .picIconsRow {
+		margin: 0 auto;
+		padding-bottom: 10px;
+		.picIcon {
+			.picIconMixin();
+		}
+	}
+
+	.profileDescr {
+		.profileDescrMixin();	
+	}
+	// }
+
+	.myCircles {
+
+		.selectScopes {
+			.selectScopesMixin();
+		}
+
+		.foundUsers {
+			.foundUsersMixin();		
+		}
+
+		.searchReset {
+			.searchResetMixin();
+		}
+		
+		.circlesDisplay, .findPeople {
+			.circlesDisplayMixin();
+		}
+		
+	}
+
+}
+
+
+@media all and (max-width: 1000px) {
+
+	header {
+		.mediaHeaderMixin();
+	}
+	
+
+	.mainLayout {
+		display: none;
+	}
+	.mediaDropdown, .mediaDropdownTitle {
+		.mediaDropdownMixin();
+	}
+
+	.mediaDropdown:hover .mediaDropList, .mediaDropdown:focus .mediaDropList, .mediaDropdown:active .mediaDropList {
+		display: block;
+
+	}
+	.navMask {
+		display: none;
+	}
+	
+	.content {
+		margin-left: 15px;
+		padding: 30px 20px 30px 20px;
+
+		.col-xs-3, .col-sm-3, .col-sm-9 {
+			text-align: center;
+			margin: 0 auto;
+		}
+
+		.row {
+			.mediaGalleryRowMixin();
+		}
+	
+		.myCircles {
+			.searchUsers {
+				padding-right: 0px;
+				padding-left: 0px;
+			}
+
+			.profileDescr {
+				.mediaProfileDescrMixin();
+			}
+
+			.selectScopes {
+				.mediaSelectScopesMixin();
+			}
+
+			.foundUsers {
+				.mediaFoundUsersMixin();		
+			}
+
+			.searchReset {
+				.mediaSearchResetMixin();
+			}
+
+			.circlesDisplay {
+				.mediaCirclesDisplayMixin();				
+			}
+		}	
+	}		
+}
+
+@media all and (max-width: 765px) {
+	
+	.col-sm-4, .col-xs-12 {
+		text-align: center;
+		margin: 0 auto;
+		// float: none;
+	}
+}
+

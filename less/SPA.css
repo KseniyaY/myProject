@@ -1,0 +1,527 @@
+@import "fonts/font-awesome.css";
+@font-face {
+  font-family: FontAwesome;
+  /* Имя шрифта */
+  src: url(../fonts/fontawesome-webfont.ttf);
+  /* Путь к файлу со шрифтом */
+  font-family: 'DS StandartCyr', Arial;
+  /* Имя шрифта */
+  src: url(../fonts/dsstnd.ttf);
+  /* Путь к файлу со шрифтом */
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 0;
+}
+.wrap {
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  font-family: "Arial";
+  font-size: 13px;
+  overflow: hidden;
+  /*именно min-height, иначе при обычном свойстве height:100; контент перекроет футер*/
+  position: relative;
+}
+header {
+  width: 100%;
+  height: auto;
+  background-color: #6e3095;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 7px 21px -1px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: 0px 7px 21px -1px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 7px 21px -1px rgba(0, 0, 0, 0.42);
+}
+header .logo {
+  display: block;
+  margin: 27px 0px 27px 30px;
+  font-family: 'DS StandartCyr';
+  font-size: 37px;
+  text-align: left;
+  color: #ff9900;
+  font-weight: bold;
+}
+header .logo .logoDomain {
+  font-size: 23px;
+}
+header .backHome {
+  margin: 27px 50px 27px 0px;
+  text-align: right;
+}
+header .backHome .fa-home {
+  color: #ffffff;
+  font-size: 30px;
+  margin-right: 35px;
+  padding: 3px 3px 3px 3px;
+  display: inline-block;
+  vertical-align: top;
+}
+header .backHome .fa-home:hover,
+header .backHome .fa-home:active,
+header .backHome .fa-home a:focus {
+  border: 2px solid #ffffff;
+  border-radius: 33px;
+}
+header .backHome .user {
+  margin-right: 13px;
+  margin-top: 3px;
+  display: inline-block;
+}
+header .backHome .fa-user {
+  color: #ff9900;
+  font-size: 21px;
+  margin-right: 15px;
+  display: inline-block;
+}
+header .backHome .userName {
+  color: #ff9900;
+  font-size: 20px;
+  margin-bottom: 7px;
+  display: inline-block;
+}
+header .backHome .logOut {
+  color: #ffffff;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+header .backHome .logOut a {
+  text-decoration: none;
+  color: #ffffff;
+}
+header .backHome .logOut a:hover,
+header .backHome .logOut a:focus {
+  color: #ff9900;
+}
+.underConstruction {
+  color: #ff9900;
+  font-size: 33px;
+  width: 80%;
+  margin-top: 75px;
+  text-align: center;
+}
+.underConstruction .fa-cogs {
+  padding-right: 20px;
+  color: #6e3095;
+  font-size: 77px;
+}
+.navWrapper {
+  position: relative;
+  margin: 0 auto;
+  min-width: 100%;
+  min-height: 100%;
+}
+.navMask {
+  position: absolute;
+  width: 222px;
+  min-height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(110, 48, 149, 0.9);
+  z-index: -1;
+  -webkit-box-shadow: 15px 0px 16px -7px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: 15px 0px 16px -7px rgba(0, 0, 0, 0.44);
+  box-shadow: 15px 0px 16px -7px rgba(0, 0, 0, 0.44);
+}
+.nav {
+  position: absolute;
+  width: 222px;
+  height: 100%;
+  float: left;
+  z-index: 1;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Arial";
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 20px;
+}
+.nav ul {
+  list-style-position: outside;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #ff9900;
+}
+.mediaDropdown,
+.mediaDropList {
+  display: none;
+}
+.mediaDropdown:first-child {
+  color: #ffffff;
+  background: linear-gradient(to bottom, #ff9900 0%, #febc5b 100%);
+  padding-left: 0px;
+}
+.mainNavLinks {
+  width: 100%;
+  display: block;
+  list-style: none;
+  text-decoration: none;
+  text-align: left;
+  padding-left: 50px;
+  color: #ffffff;
+  padding: 15px 0px 15px 30px;
+  background: linear-gradient(to bottom, #ff9900 0%, #febc5b 100%);
+}
+.mainNavLinks .badge {
+  background-color: white;
+  color: #ff9900;
+  margin: 0px 3px 0px 9px;
+}
+.mainNavLinks .fa-envelope,
+.mainNavLinks .fa-users,
+.mainNavLinks .fa-gear {
+  margin: 0px 9px 0px 3px;
+}
+.mainNavLinks:hover {
+  background: #6e3095;
+  text-decoration: none;
+  color: #ffffff;
+}
+.mainNavLinks:focus {
+  background: #6e3095;
+  text-decoration: none;
+  color: #ffffff;
+}
+.mainNavLinks:active {
+  background: #6e3095;
+  text-decoration: none;
+  color: #ffffff;
+}
+.content {
+  margin-left: 225px;
+  padding: 30px 20px 30px 10px;
+}
+.content .gallery {
+  margin: 0px;
+  padding: 7px 15px 5px 15px;
+}
+.content .gallery .profilePic {
+  margin: 9px 0px 0px 0px;
+}
+.content .gallery .mainPic {
+  width: 172px;
+  height: 230px;
+}
+.content .picIconsGallery {
+  padding: 0px 0px 0px 25px;
+}
+.content .row .picIconsRow {
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+.content .row .picIconsRow .picIcon {
+  padding: 7px 7px 7px 7px;
+}
+.content .row .picIconsRow .picIcon img {
+  width: 135px;
+  height: 110px;
+  background-color: #dad8d8;
+}
+.content .profileDescr {
+  padding: 7px 15px 5px 15px;
+  margin: 0 auto;
+}
+.content .profileDescr h2 {
+  font-size: 15px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  padding: 7px 7px 5px 7px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  background-color: #ff9900;
+}
+.content .profileDescr .briefInfo,
+.content .profileDescr .aboutTitle {
+  box-sizing: border-box;
+  padding: 0px;
+}
+.content .profileDescr .briefInfo {
+  text-align: left;
+}
+.content .profileDescr .descrQuest,
+.content .profileDescr .descrReply {
+  margin: 10px 0px 10px 0px;
+  color: #666666;
+  font-size: 13px;
+  text-align: justify;
+}
+.content .profileDescr .briefInfoItems,
+.content .profileDescr .interests {
+  padding: 0px 3px 10px 7px;
+}
+.content .profileDescr .aboutInfo {
+  padding: 0px;
+  margin-top: 10px;
+}
+.content .profileDescr .aboutInfo .aboutTitle {
+  display: block;
+}
+.content .profileDescr .aboutInfo .aboutText {
+  display: block;
+  font-size: 13px;
+  text-align: justify;
+  padding: 0px 7px 0px 7px;
+}
+.content .profileDescr .interests .tags {
+  margin: 0 auto;
+  padding: 7px 10px 7px 10px;
+  text-align: justify;
+}
+.content .profileDescr .interests .btn-primary {
+  background-color: #666666;
+  font-size: 12px;
+  border: none;
+  padding: 6px 7px 6px 7px;
+  margin: 3px 3px 3px 3px;
+}
+.content .profileDescr .interests .btn-primary .fa-male,
+.content .profileDescr .interests .btn-primary .fa-female {
+  padding: 0px 3px 0px 3px;
+}
+.content .myCircles .selectScopes {
+  background-color: #ff9900;
+  color: #ffffff;
+  border: 1px solid #ff9900;
+  width: 100%;
+  padding: 7px 7px 5px 7px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 17px;
+}
+.content .myCircles .selectScopes :first-child {
+  display: none;
+}
+.content .myCircles .selectScopes option {
+  background-color: #ffffff;
+  color: #666666;
+}
+.content .myCircles .foundUsers {
+  padding: 2px 7px 5px 7px;
+  text-align: center;
+  color: #666666;
+}
+.content .myCircles .foundUsers .usersNum {
+  color: #ff9900;
+  font-weight: bold;
+  font-size: 22px;
+}
+.content .myCircles .foundUsers .fa-users {
+  padding: 0px 0px 0px 7px;
+  font-size: 19px;
+}
+.content .myCircles .searchReset .btn-primary {
+  background-color: #666666;
+  width: 100%;
+  text-align: center;
+}
+.content .myCircles .circlesDisplay .circleMember,
+.content .myCircles .findPeople .circleMember,
+.content .myCircles .circlesDisplay .addMember,
+.content .myCircles .findPeople .addMember {
+  margin: 10px 7px 15px 7px;
+}
+.content .myCircles .circlesDisplay .memberImage img,
+.content .myCircles .findPeople .memberImage img {
+  width: 191px;
+  height: 157px;
+}
+.content .myCircles .circlesDisplay .memberPanel,
+.content .myCircles .findPeople .memberPanel {
+  margin: 30px 0px 0px 0px;
+}
+.content .myCircles .circlesDisplay .memberName,
+.content .myCircles .findPeople .memberName {
+  color: #666666;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0px 0px 20px 0px;
+}
+.content .myCircles .circlesDisplay .memberPanel .btn-primary,
+.content .myCircles .findPeople .memberPanel .btn-primary {
+  width: 100%;
+}
+.content .myCircles .circlesDisplay .scope,
+.content .myCircles .findPeople .scope,
+.content .myCircles .circlesDisplay .message,
+.content .myCircles .findPeople .message {
+  background-color: #666666;
+  border-color: #666666;
+}
+.content .myCircles .circlesDisplay .fa-edit,
+.content .myCircles .findPeople .fa-edit {
+  font-size: 17px;
+  padding: 0px 9px 0px 0px;
+}
+.content .myCircles .circlesDisplay .del,
+.content .myCircles .findPeople .del {
+  background-color: #ff9900;
+  border-color: #ff9900;
+}
+@media all and (max-width: 1000px) {
+  header .logo {
+    text-align: center;
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+  header .backHome {
+    margin: 10px 33px 27px 0px;
+  }
+  header .backHome .fa-home {
+    font-size: 22px;
+    margin-right: 15px;
+  }
+  header .backHome .user {
+    margin-right: 17px;
+  }
+  header .backHome .fa-user {
+    font-size: 17px;
+    margin-right: 15px;
+  }
+  header .backHome .userName {
+    font-size: 17px;
+    margin-bottom: 7px;
+  }
+  header .backHome .logOut {
+    font-size: 11px;
+  }
+  .mainLayout {
+    display: none;
+  }
+  .mediaDropdown,
+  .mediaDropdownTitle {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: "Arial";
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 20px;
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-align: center;
+  }
+  .mediaDropdown ul,
+  .mediaDropdownTitle ul {
+    list-style-position: outside;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #ff9900;
+  }
+  .mediaDropdown ul,
+  .mediaDropdownTitle ul {
+    padding: 0px;
+  }
+  .mediaDropdown li,
+  .mediaDropdownTitle li,
+  .mediaDropdown a,
+  .mediaDropdownTitle a {
+    padding-left: 0px;
+    text-align: center;
+  }
+  .mediaDropdown li .fa-navicon,
+  .mediaDropdownTitle li .fa-navicon,
+  .mediaDropdown a .fa-navicon,
+  .mediaDropdownTitle a .fa-navicon {
+    font-size: 33px;
+    padding: 15px 0px 15px 0px;
+  }
+  .mediaDropdown:hover .mediaDropList,
+  .mediaDropdown:focus .mediaDropList,
+  .mediaDropdown:active .mediaDropList {
+    display: block;
+  }
+  .navMask {
+    display: none;
+  }
+  .content {
+    margin-left: 15px;
+    padding: 30px 20px 30px 20px;
+  }
+  .content .col-xs-3,
+  .content .col-sm-3,
+  .content .col-sm-9 {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .content .row {
+    margin: 0px auto;
+  }
+  .content .row .col-lg-1 {
+    padding: 0px 7px 0px 7px;
+  }
+  .content .row .profilePic {
+    margin-bottom: 10px;
+  }
+  .content .row .mainPic {
+    width: 150px;
+    height: 198px;
+  }
+  .content .row .picIconsGallery {
+    padding-left: 7px;
+  }
+  .content .row .picIconsGallery .picIconsRow {
+    margin: 0 auto;
+    padding: 0px;
+  }
+  .content .row .picIconsGallery .iconsWrap {
+    margin: 0 auto;
+  }
+  .content .row .picIconsGallery .picIcon img {
+    width: 110px;
+    height: 90px;
+  }
+  .content .myCircles .searchUsers {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .content .myCircles .profileDescr .briefInfo,
+  .content .myCircles .profileDescr .interests,
+  .content .myCircles .profileDescr .aboutInfo,
+  .content .myCircles .profileDescr .aboutTitle {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0 auto;
+  }
+  .content .myCircles .selectScopes {
+    font-size: 12px;
+  }
+  .content .myCircles .selectScopes :first-child {
+    display: none;
+  }
+  .content .myCircles .foundUsers .usersNum {
+    font-size: 17px;
+  }
+  .content .myCircles .foundUsers .fa-users {
+    margin-top: 7px;
+    font-size: 15px;
+  }
+  .content .myCircles .searchReset .btn-primary {
+    font-size: 12px;
+    word-wrap: break-word;
+  }
+  .content .myCircles .circlesDisplay .memberName,
+  .content .myCircles .circlesDisplay .memberImage {
+    text-align: center;
+  }
+  .content .myCircles .circlesDisplay .col-md-5,
+  .content .myCircles .circlesDisplay .col-md-2 {
+    margin: 7px 0px 7px 0px;
+    width: 100%;
+  }
+}
+@media all and (max-width: 765px) {
+  .col-sm-4,
+  .col-xs-12 {
+    text-align: center;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,635 @@
+@import "fonts/font-awesome.css";
+@font-face {
+  font-family: FontAwesome;
+  /* Имя шрифта */
+  src: url(../fonts/fontawesome-webfont.ttf);
+  /* Путь к файлу со шрифтом */
+  font-family: 'DS StandartCyr', Arial;
+  /* Имя шрифта */
+  src: url(../fonts/dsstnd.ttf);
+  /* Путь к файлу со шрифтом */
+}
+.body {
+  margin: 0 auto;
+  min-height: 100%;
+}
+.pageWrapper {
+  position: relative;
+  margin: 0 auto;
+  min-width: 100%;
+  min-height: 100%;
+}
+@media all and (min-width: 1000px) {
+  .pageWrapper {
+    max-width: 80%;
+  }
+}
+.footerWrapper {
+  /*этот контейнер дублирует общий контейнер wrap с позиционированием relative,
+	но при этом добляет педдинг непосредственно под футер и защищает его от влияния текста контента*/
+  margin: 0 auto;
+  min-height: 100%;
+  /*именно min-height, иначе при обычном свойстве height:100; контент перекроет футер*/
+  padding-bottom: 10px;
+  /*чтобы футер был прижат, нам обязательно необходимо указать для него именно фиксированную высоту, а основному диву контента добавить свойство padding-bottom:75px (конкретно то фиксированное значение, которое мы выбрали для высоты футера)*/
+  /*этот контейнер дублирует общий контейнер wrap с позиционированием relative,
+	но при этом добляет педдинг непосредственно под футер и защищает его от влияния текста контента*/
+  /*именно min-height, иначе при обычном свойстве height:100; контент перекроет футер*/
+  /*чтобы футер был прижат, нам обязательно необходимо указать для него именно фиксированную высоту, а основному диву контента добавить свойство padding-bottom:75px (конкретно то фиксированное значение, которое мы выбрали для высоты футера)*/
+}
+.clearfix {
+  clear: both;
+}
+.footerStyle {
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 70px 35px 42px 75px;
+  display: inline-block;
+  text-align: left;
+  /*чтобы футер был прижат, нам обязательно необходимо указать для него именно фиксированную высоту, а основному диву контента добавить свойство padding-bottom:75px (конкретно то фиксированное значение, которое мы выбрали для высоты футера)*/
+  background-color: rgba(110, 48, 149, 0.9);
+  clear: both;
+}
+.footerStyle .footerMenuWrap {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.footerStyle .row {
+  padding: 0px 40px 0px 15px;
+}
+.footerStyle .socialize .col-md-6,
+.footerStyle .col-md-6 {
+  text-align: right;
+}
+.footerStyle a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.footerStyle a:hover,
+.footerStyle a:focus,
+.footerStyle a:active {
+  color: #ff9900;
+}
+.footerStyle .footerContent i {
+  color: #ffffff;
+  font-size: 27px;
+}
+.footerStyle .footerContent h5 {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ff9900;
+  margin-bottom: 7px;
+}
+.footerStyle .footerContent .list-group-item {
+  background-color: rgba(255, 255, 255, 0.001);
+  color: #ffffff;
+  border: none;
+  margin-bottom: 0px;
+  padding: 0px 0px 3px 0px;
+}
+.footerStyle .footerContent .socialize .list-group-item {
+  display: inline-block;
+  padding-right: 2px;
+}
+.footerStyle .copyright {
+  color: #ffffff;
+  font-size: 12px;
+  padding-top: 12px;
+}
+.headWrapper {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  word-wrap: break-word;
+  height: auto;
+  margin: auto;
+  box-sizing: border-box;
+}
+.headWrapper .headContent {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.headWrapper .headContent .headerBg {
+  background: url("img/starry_background_light.jpg");
+  background-position: top left;
+  background-repeat: auto;
+  background-size: contain;
+  z-index: -2;
+}
+.headWrapper .headContent .headerBg .headerContainer {
+  width: 100%;
+  padding: 22px 70px 15px 70px;
+  display: inline-block;
+  margin: 0 auto;
+}
+.headWrapper .adContent {
+  display: inline-block;
+  float: left;
+  width: 674px;
+  padding: 0px 10px 0px 5px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+.headWrapper .adContent .logo {
+  display: block;
+  margin: 11px 0px 22px 0px;
+  font-family: 'DS StandartCyr';
+  font-size: 77px;
+  text-align: left;
+  color: #ff9900;
+}
+.headWrapper .adContent .logo .logoDomain {
+  font-size: 44px;
+}
+.headWrapper .adContent h1.slogan {
+  display: block;
+  margin-bottom: 22px;
+  font-family: Arial;
+  font-size: 33px;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffffff;
+  width: 100%;
+}
+.headWrapper .adContent h2 {
+  display: block;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: left;
+  width: 100%;
+}
+.headWrapper .forms {
+  display: inline-block;
+  float: right;
+  z-index: 2;
+  width: 520px;
+  padding-right: 20px;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Arial";
+  overflow: hidden;
+}
+.headWrapper .loginForm {
+  display: inline-block;
+  width: 100%;
+  margin-left: 22px;
+  font-family: "Arial";
+  font-size: 13px;
+}
+.headWrapper .loginForm .login,
+.headWrapper .loginForm .password {
+  display: inline-block;
+  box-sizing: border-box;
+  float: left;
+  width: 200px;
+  margin-right: 10px;
+  margin-bottom: 14px;
+}
+.headWrapper .loginForm .login input,
+.headWrapper .loginForm .password input,
+.headWrapper .loginForm .login label,
+.headWrapper .loginForm .password label {
+  display: block;
+  padding-left: 7px;
+  margin-bottom: 7px;
+}
+.headWrapper .loginForm .login label,
+.headWrapper .loginForm .password label {
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 10px;
+}
+.headWrapper .loginForm .login label a,
+.headWrapper .loginForm .password label a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.headWrapper .loginForm .login label a:hover,
+.headWrapper .loginForm .password label a:hover,
+.headWrapper .loginForm .login label a:focus,
+.headWrapper .loginForm .password label a:focus {
+  color: #ff9900;
+}
+.headWrapper .loginForm .login .rememberMe,
+.headWrapper .loginForm .password .rememberMe,
+.headWrapper .loginForm .login .forgotPass,
+.headWrapper .loginForm .password .forgotPass {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+.headWrapper .loginForm .loginAsMember {
+  display: inline-block;
+  float: left;
+  width: 75px;
+  box-sizing: border-box;
+}
+.headWrapper .loginForm .loginAsMember button {
+  display: inline-block;
+  line-height: 1.1em;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 6px 4px 6px 4px;
+  text-transform: uppercase;
+}
+.headWrapper .loginForm .loginAsMember button span {
+  font-family: "Arial Narrow";
+  font-size: 10px;
+  text-transform: none;
+}
+.headWrapper .loginForm .loginAsMember .logButtStyle {
+  background-color: rgba(255, 153, 0, 0.66);
+  color: #ffffff;
+  text-align: center;
+  border: 1px trasparent #ffffff;
+  border-radius: 3px;
+}
+.headWrapper .loginForm .loginAsMember .logButtStyle a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.headWrapper .registration {
+  padding: 15px 23px 10px 23px;
+  border-radius: 7px;
+  background-color: rgba(255, 153, 0, 0.66);
+  margin-left: 233px;
+}
+.headWrapper .registration .fa-chevron-circle-down {
+  color: #ffffff;
+  font-size: 20px;
+  text-indent: 10px;
+}
+.headWrapper .registration h3 {
+  margin: 0 auto;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 17px;
+  color: #6e3095;
+  text-align: center;
+}
+.headWrapper .registration label {
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 10px;
+  margin-bottom: 7px;
+}
+.headWrapper .registration input,
+.headWrapper .registration select,
+.headWrapper .registration button {
+  width: 100%;
+  padding-left: 7px;
+  margin-bottom: 7px;
+}
+.headWrapper .registration .sexOrient {
+  display: inline-block;
+  width: 48.75%;
+  padding: 3px;
+}
+.headWrapper .registration .register {
+  background-color: #6e3095;
+  border: none;
+  border-radius: 3px;
+  height: 26px;
+  color: #ff9900;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.headWrapper .registration .register a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.headWrapper .registration p {
+  font-size: 9px;
+  color: #ffffff;
+  text-align: center;
+}
+.headWrapper .registration .formDataWrapper {
+  display: none;
+}
+.navbar {
+  border-radius: 0px;
+}
+.horizontalNav {
+  background-color: #6e3095;
+  border: none;
+  border-radius: none;
+  margin: 0 auto;
+  padding: 5px 35px 5px 17px;
+  margin-bottom: 22px;
+  font-family: "Arial";
+  font-size: 17px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.horizontalNav .nav li a {
+  color: #ffffff;
+  border-bottom: none;
+}
+.horizontalNav .nav li a:focus,
+.horizontalNav .nav li a:hover,
+.horizontalNav .nav li a:active {
+  background-color: rgba(255, 153, 0, 0.66);
+  border: none;
+}
+.mainContent {
+  margin: 0px 75px 42px 75px;
+}
+.carousel-control.right {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0, #6e3095 100%);
+}
+.carousel-control.left {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0, #6e3095 100%);
+}
+.icon-next,
+.icon-prev {
+  font-size: 22px;
+}
+.carousel-indicators {
+  position: relative;
+  bottom: 15px;
+}
+.carousel-indicators li {
+  background-color: #ff9900;
+}
+.carousel-indicators .active {
+  background-color: #6e3095;
+}
+.hr {
+  height: 1px;
+  background-color: #909090;
+  margin: 30px 0px 30px 0px;
+}
+.serviceDescr h2,
+.scopesDescr h2 {
+  color: #666666;
+  font-weight: bold;
+  font-size: 17px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.serviceDescr p,
+.scopesDescr p {
+  color: #666666;
+  font-size: 16px;
+  text-align: justify;
+  margin-bottom: 44px;
+}
+.scopesGallery .row {
+  margin: 0 auto;
+  padding: 0px;
+}
+.col-sm-6,
+.col-md-2 {
+  padding: 3px;
+  margin: 0 auto;
+}
+.thumbnail {
+  padding: 0px;
+  border: 0px;
+}
+.thumbnail .thumbnail {
+  margin-bottom: 10px;
+}
+.thumbnail img {
+  width: 100%;
+}
+.thumbnail img:hover {
+  transform: scale(1.025, 1.025);
+  z-index: 10;
+  -webkit-box-shadow: 1px 2px 36px -4px rgba(150, 142, 136, 0.52);
+  -moz-box-shadow: 1px 2px 36px -4px rgba(150, 142, 136, 0.52);
+  box-shadow: 1px 2px 36px -4px rgba(150, 142, 136, 0.52);
+  border-radius: 9px;
+}
+.thumbnail .caption {
+  font-size: 12px;
+  text-align: center;
+  color: #6e3095;
+}
+.thumbnail .btns {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.thumbnail .btn-primary {
+  background-color: #ff9900;
+  border: none;
+}
+.thumbnail .btn-primary:focus,
+.thumbnail .btn-primary.focus,
+.thumbnail .btn-primary:hover,
+.thumbnail .btn-primary:active,
+.thumbnail .btn-primary.active,
+.thumbnail .btn-primary:active:hover,
+.thumbnail .btn-primary.active:hover {
+  color: #ffffff;
+  background-color: #6e3095;
+  border: none;
+}
+.footerStyle {
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 70px 35px 42px 75px;
+  display: inline-block;
+  text-align: left;
+  /*чтобы футер был прижат, нам обязательно необходимо указать для него именно фиксированную высоту, а основному диву контента добавить свойство padding-bottom:75px (конкретно то фиксированное значение, которое мы выбрали для высоты футера)*/
+  background-color: rgba(110, 48, 149, 0.9);
+  clear: both;
+}
+.footerStyle .footerMenuWrap {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.footerStyle .row {
+  padding: 0px 40px 0px 15px;
+}
+.footerStyle .socialize .col-md-6,
+.footerStyle .col-md-6 {
+  text-align: right;
+}
+.footerStyle a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.footerStyle a:hover,
+.footerStyle a:focus,
+.footerStyle a:active {
+  color: #ff9900;
+}
+.footerStyle .footerContent i {
+  color: #ffffff;
+  font-size: 27px;
+}
+.footerStyle .footerContent h5 {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ff9900;
+  margin-bottom: 7px;
+}
+.footerStyle .footerContent .list-group-item {
+  background-color: rgba(255, 255, 255, 0.001);
+  color: #ffffff;
+  border: none;
+  margin-bottom: 0px;
+  padding: 0px 0px 3px 0px;
+}
+.footerStyle .footerContent .socialize .list-group-item {
+  display: inline-block;
+  padding-right: 2px;
+}
+.footerStyle .copyright {
+  color: #ffffff;
+  font-size: 12px;
+  padding-top: 12px;
+}
+@media all and (max-width: 1300px) {
+  .headWrapper .headContent .headerBg {
+    width: 100%;
+    margin: 0 auto;
+    background: url("img/starry_background_light.jpg");
+    background-position: center;
+    background-size: 200% 100%;
+  }
+  .footerStyle {
+    padding: 30px 20px 30px 20px;
+  }
+  .headWrapper .headContent .headerBg .headerContainer {
+    padding: 22px 10px 15px 10px;
+    width: 100%;
+  }
+  .headerContainer {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    float: none;
+  }
+  .headerContainer .adContent {
+    width: auto;
+    display: block;
+    float: none;
+  }
+  .headerContainer .adContent .logo {
+    margin-top: 22px;
+    font-size: 2.75em;
+  }
+  .headerContainer .adContent .logo span.logoDomain {
+    font-size: 0.75em;
+  }
+  .headerContainer .adContent h1.slogan {
+    font-size: 1.5em;
+  }
+  .headerContainer .adContent h2.projectDescr {
+    font-size: 1.1em;
+  }
+  .headerContainer .adContent .logo,
+  .headerContainer .adContent h1.slogan,
+  .headerContainer .adContent h2.projectDescr {
+    text-align: center;
+    width: auto;
+  }
+  .headerContainer .forms {
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    width: 100%;
+    padding-top: 35px;
+  }
+  .headerContainer .loginForm {
+    margin: 0 auto;
+    padding: 0px;
+    float: none;
+  }
+  .headerContainer .loginForm .login,
+  .headerContainer .loginForm .password,
+  .headerContainer .loginForm .loginAsMember {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 7px;
+  }
+  .headerContainer .registration {
+    font-size: 0.9em;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+  }
+  .headerContainer .registration h3 {
+    font-size: 1.0em;
+  }
+  .headerContainer .registration input,
+  .headerContainer .registration input.value,
+  .headerContainer .registration label {
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 5px;
+    font-size: 0.8em;
+  }
+  .headerContainer .registration button {
+    font-size: 1.1em;
+  }
+  .mainContent {
+    margin: 0px 20px 42px 20px;
+  }
+  .mainContent h2 {
+    text-align: center;
+  }
+  .mainContent .carousel-indicators {
+    bottom: 0px;
+  }
+  .col-main_size {
+    margin: 0 auto;
+  }
+  .footerStyle {
+    display: block;
+    text-align: center;
+  }
+  .footerStyle .footerMenuWrap {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .footerStyle .col-md-6 {
+    text-align: center;
+  }
+  .footerStyle h5 {
+    margin-bottom: 0px;
+  }
+  .footerStyle .list-group {
+    margin-bottom: 25px;
+  }
+  .footerStyle .list-group-item {
+    padding-bottom: 3px;
+  }
+}
+@media all and (max-width: 1000px) {
+  .lastchild {
+    float: none;
+    margin: 0 auto;
+  }
+  .lastchild .thumbnail {
+    background-color: rgba(255, 255, 255, 0.001);
+  }
+}
+@media all and (min-width: 1000px) {
+  .col-main_size {
+    width: 20%;
+  }
+}

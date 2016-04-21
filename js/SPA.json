@@ -1,0 +1,191 @@
+{
+  "circles": [
+    {
+      "image": "less/img/circles_pics/spartan.jpg",
+      "name": "Spartan",
+      "scope": "Hobbies & Interests",
+      "scopeId": 2,
+      "id": 1
+    },
+    {
+      "image": "less/img/circles_pics/wolverine.jpg",
+      "name": "Wolverine",
+      "scope": "Hobbies & Interests",
+      "scopeId": 2,
+      "id": 2
+    },
+    {
+      "image": "less/img/circles_pics/jack_sparrow.jpg",
+      "name": "Jack Sparrow",
+      "scope": "Hobbies & Interests",
+      "scopeId": 2,
+      "id": 3
+    },
+    {
+      "image": "less/img/circles_pics/phoebe.jpg",
+      "name": "Phoebe",
+      "scope": "Friendship & roommates",
+      "scopeId": 4,
+      "id": 4
+    },
+    {
+      "image": "less/img/circles_pics/rachel.jpg",
+      "name": "Rachel",
+      "scope": "Friendship & roommates",
+      "scopeId": 4,
+      "id": 5
+    },
+    {
+      "image": "less/img/circles_pics/stub_picIcon.jpg",
+      "name": "Someone",
+      "scope": "Friendship & roommates",
+      "scopeId": 4,
+      "id": 6
+    },
+    {
+      "image": "less/img/circles_pics/stub_picIcon.jpg",
+      "name": "Someone",
+      "scope": "Friendship & roommates",
+      "scopeId": 4,
+      "id": 7
+    },
+    {
+      "image": "less/img/circles_pics/stub_picIcon.jpg",
+      "name": "Someone",
+      "scope": "Friendship & roommates",
+      "scopeId": 4,
+      "id": 8
+    },
+    {
+      "image": "less/img/circles_pics/invisible_man.jpg",
+      "name": "Invisible man",
+      "scope": "Co-working & start-ups",
+      "scopeId": 5,
+      "id": 9
+    },
+    {
+      "image": "less/img/circles_pics/stub_picIcon.jpg",
+      "name": "Someone",
+      "scope": "Co-working & start-ups",
+      "scopeId": 5,
+      "id": 10
+    },
+    {
+      "image": "less/img/circles_pics/stub_picIcon.jpg",
+      "name": "Someone",
+      "scope": "Co-working & start-ups",
+      "scopeId": 5,
+      "id": 11
+    },
+    {
+      "image": "less/img/circles_pics/stub_picIcon.jpg",
+      "name": "Someone",
+      "scope": "Co-working & start-ups",
+      "scopeId": 5,
+      "id": 12
+    },
+    {
+      "image": "less/img/circles_pics/stub_picIcon.jpg",
+      "name": "Someone",
+      "scope": "Co-working & start-ups",
+      "scopeId": 5,
+      "id": 13
+    },
+    {
+      "image": "less/img/circles_pics/stub_picIcon.jpg",
+      "name": "Someone",
+      "scope": "Co-working & start-ups",
+      "scopeId": 5,
+      "id": 14
+    },
+    {
+      "image": "less/img/circles_pics/stub_picIcon.jpg",
+      "name": "Someone",
+      "scope": "Sports & activities",
+      "scopeId": 3,
+      "id": 15
+    },
+    {
+      "image": "less/img/circles_pics/stub_picIcon.jpg",
+      "name": "Someone",
+      "scope": "Sports & activities",
+      "scopeId": 3,
+      "id": 16
+    },
+    {
+      "image": "less/img/circles_pics/stub_picIcon.jpg",
+      "name": "Someone",
+      "scope": "Sports & activities",
+      "scopeId": 3,
+      "id": 17
+    },
+    {
+      "image": "less/img/circles_pics/stub_picIcon.jpg",
+      "name": "Someone",
+      "scope": "Sports & activities",
+      "scopeId": 3,
+      "id": 18
+    },
+    {
+      "image": "less/img/circles_pics/stub_picIcon.jpg",
+      "name": "Someone",
+      "scope": "Sports & activities",
+      "scopeId": 3,
+      "id": 19
+    },
+    {
+      "image": "less/img/circles_pics/stub_picIcon.jpg",
+      "name": "Someone",
+      "scope": "Sports & activities",
+      "scopeId": 3,
+      "id": 20
+    },
+    {
+      "image": "less/img/circles_pics/stub_picIcon.jpg",
+      "name": "Someone",
+      "scope": "Sports & activities",
+      "scopeId": 3,
+      "id": 21
+    },
+    {
+      "image": "less/img/circles_pics/stub_picIcon.jpg",
+      "name": "Someone",
+      "scope": "Sports & activities",
+      "scopeId": 3,
+      "id": 22
+    },
+    {
+      "image": "less/img/circles_pics/stub_picIcon.jpg",
+      "name": "Prince on a white horse :)",
+      "scope": "Dating & relationship",
+      "scopeId": 1,
+      "id": 23
+    }
+  ],
+  "scopes": [
+    {
+      "id": 0,
+      "name": "Select a scope"
+    },
+    {
+      "id": 1,
+      "name": "Dating & Relationship"
+    },
+    {
+      "id": 2,
+      "name": "Hobbies & Interests"
+    },
+    {
+      "id": 3,
+      "name": "Sports & Activities"
+    },
+    {
+      "id": 4,
+      "name": "Friendship & Roommates"
+    },
+    {
+      "id": 5,
+      "name": "Co-working & Start-ups"
+    }
+  ]
+}

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dating, friendship, communities, start-ups</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="less/SPA.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/SPA_xhr.js"></script>
+</head>
+<body>
+<!-- 	<div class="wrap"> -->
+		<header>
+			<div class="row">
+				<div class="col-md-8 col-sm-12 col-xs-12">
+					<div class="logo">go-between.<span class="logoDomain">com</span></div>
+				</div>
+				<div class="col-md-4 col-sm-12 col-xs-12">
+					<div class="backHome">
+						<a href="#" onclick="backHome()"><span class="fa fa-home"></span></a>
+						<div class="user">
+							<div class="userName"><span class="fa fa-user"></span>Kseniya</div>
+							<div class="logOut" onclick="backHome()"><a href="#">Log out</a></div>
+						</div>
+					</div>
+
+					
+				</div>
+			</div>
+		</header>
+
+		<div class="navWrapper">
+			<ul class="mediaDropdown">
+					<li class="mediaDropdownTitle">
+					<span class="fa fa-navicon"></span>
+						<ul class="mediaDropList">
+							<li class="mainItems"><a href="#" class="mainNavLinks profileItem goToMyProfile">My profile</a></li>
+							<li class="mainItems"><a href="#" class="mainNavLinks goToMyCircles">My circles<span class="badge usersTotalNum"></span><span class="fa fa-users"></span></a></li>
+							<li class="mainItems"><a href="#" class="mainNavLinks goToMyMessages">Messages<span class="badge">123</span><span class="fa fa-envelope"></span></a></li>
+							<li class="mainItems"><a href="#" class="mainNavLinks findMyPeople">Find people</a></li>
+							<li class="mainItems drop"><a href="#" class="mainNavLinks goToMySettings">Settings</a></li>
+						</ul>
+					</li>	
+			</ul>	
+			<nav class="nav">
+				<div class="navMask"></div>
+					<ul class="mainLayout">
+						<li class="mainItems"><a href="#" class="profileItem mainNavLinks goToMyProfile">My profile</a></li>
+						<li class="mainItems"><a href="#" class="mainNavLinks goToMyCircles">My circles<span class="badge usersTotalNum"></span><span class="fa fa-users"></span></a></li>
+						<li class="mainItems"><a href="#" class="mainNavLinks goToMyMessages">Messages<span class="badge">123</span><span class="fa fa-envelope"></span></a></li>
+						<li class="mainItems"><a href="#" class="mainNavLinks findMyPeople">Find people</a></li>
+						<li class="mainItems drop goToMySettings"><a href="#" class="mainNavLinks">Settings</a></li>
+					</ul>
+			</nav>
+
+			<main class="content">
+				<div class="container-fluid myProfile">
+					<section class="row gallery">
+						<div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 profilePic">
+							<img class = "mainPic" src="less/img/profile_pics/profile_main_pic_resized.jpg" alt="my_profile_pic" width="174px" height="232px">
+						</div>
+							
+						<div class="col-lg-10 col-md-9 col-sm-9 col-xs-12 picIconsGallery">
+							<div class="row picIconsRow">
+								<div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 picIcon">
+									<img src="less/img/profile_pics/stub_picIcon.jpg" alt="my pictures" width="145px" height="110px">
+								</div>
+
+								<div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 picIcon">
+									<img src="less/img/profile_pics/stub_picIcon.jpg" alt="my pictures" width="145px" height="110px">
+								</div>
+
+								<div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 picIcon">
+									<img src="less/img/profile_pics/stub_picIcon.jpg" alt="my pictures" width="145px" height="110px">
+								</div>
+
+								<div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 picIcon">
+									<img src="less/img/profile_pics/stub_picIcon.jpg" alt="my pictures" width="145px" height="110px">
+								</div>
+
+								<div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 picIcon">
+									<img src="less/img/profile_pics/stub_picIcon.jpg" alt="my pictures" width="145px" height="110px">
+								</div>
+
+								<div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 picIcon">
+									<img src="less/img/profile_pics/stub_picIcon.jpg" alt="my pictures" width="145px" height="110px">
+								</div>
+
+								<div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 picIcon">
+									<img src="less/img/profile_pics/stub_picIcon.jpg" alt="my pictures" width="145px" height="110px">
+								</div>
+
+								<div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 picIcon">
+									<img src="less/img/profile_pics/stub_vidIcon.jpg" alt="my video" width="145px" height="110px">
+								</div>	
+							</div>
+							
+						</div>
+
+					</section>
+
+					<section class="row profileDescr">
+						<div class="col-md-6 col-xs-12 briefInfo">
+							<h2 class="briefInfoTitle">Brief info</h2>
+						<div class="briefInfoItems">
+							<span class="descrQuest"><strong>Gender: </strong></span>
+							<span class="descrReply">Female</span><br>
+
+							<span class="descrQuest"><strong>Age: </strong></span>
+							<span class="descrReply">34</span><br>
+
+							<span class="descrQuest"><strong>Location: </strong></span>
+							<span class="descrReply">Ukraine</span><br>
+
+							<span class="descrQuest"><strong>Education: </strong></span>
+							<span class="descrReply">University degree, MS, major in Marketing</span><br>
+
+							<span class="descrQuest"><strong>Professional Area: </strong></span>
+							<span class="descrReply">IT, Marketing & Brand 		Management</span><br>
+						</div>
+
+
+						</div>
+						<div class="col-md-6 col-xs-12 interests">
+							<h2 class="interestsTitle">Interests</h2>
+							<div class="tags">	
+								<div type="button" class="btn btn-primary">Dating & Relationship</div>
+								<div type="button" class="btn btn-primary">Interested in: <span class="fa fa-male"></span></div>
+								<div type="button" class="btn btn-primary">Fitness</div>
+								<div type="button" class="btn btn-primary">Hiking</div>
+								<div type="button" class="btn btn-primary">Learning English</div>
+								<div type="button" class="btn btn-primary">Books</div>
+								<div type="button" class="btn btn-primary">Board Games</div>
+								<div type="button" class="btn btn-primary">Travelling</div>
+								<div type="button" class="btn btn-primary">Foodie</div>
+								<div type="button" class="btn btn-primary">Materialization of thoughts</div>
+								<div type="button" class="btn btn-primary">Hunting dragons</div>
+								<div type="button" class="btn btn-primary">Extraordinary people</div>
+								<div type="button" class="btn btn-primary">Pirates</div>
+								<div type="button" class="btn btn-primary">Seriousness!</div>
+								<div type="button" class="btn btn-primary">Co-working</div>
+								<div type="button" class="btn btn-primary">FrontEnd Dev</div>
+								<div type="button" class="btn btn-primary">etc</div>
+							</div>	
+						</div>
+						<div class="col-md-12 col-xs-12 aboutInfo">
+							<div class="col-md-6 col-xs-12 aboutTitle">
+								<h2>About myself</h2>
+							</div>
+							<div class="col-md-12 col-xs-12 aboutText">
+								<p>
+									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit.</p>
+
+								<p>
+									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit.</p>
+							</div>		
+						</div>
+
+
+					</section>
+				</div>
+
+
+				<div class="container-fluid myCircles">
+						<!-- <section class="row circlesFilter">
+							<div class="col-md-5 searchUsers">
+								<select class="selectScopes" name="scopes" id="scopes">
+									<option value="select">Select scopes</option>
+									<option value="dating">Dating & Relationship</option>
+									<option value="hobbies">Hobbies & Interests</option>
+									<option value="sport">Sport & Activities</option>
+									<option value="friendship">Friendship & Roommates</option>
+									<option value="co-working">Co-working & Start-ups</option>
+								</select>
+							</div>
+							<div class="col-md-4 col-xs-12 foundUsers">
+								<span class="usersNum"></span><span class="fa fa-users"> users are found</span>
+							</div>
+							<div class="col-md-3 col-xs-12 searchReset">
+								<div type="button" class="btn btn-primary">Search reset</div>
+							</div>
+						</section> -->
+
+						<section class="row circlesDisplay">
+							<!-- <div class="row circleMember">
+								<div class="col-md-3 memberImage">
+									<img src="less/img/circles_pics/spartan.jpg" alt="Spartan">
+								</div>
+
+								<div class="col-md-9 memberPanel">
+									<div class="col-md-12 memberName">Spartan</div>
+									<div class="col-md-5 memberControls">
+										<div type="button" class="btn btn-primary scope">Hobbies & Interests</div>
+									</div>
+									<div class="col-md-5">
+										<div type="button" class="btn btn-primary message">
+											<span class="fa fa-edit"></span>Write a message
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div type="button" class="btn btn-primary del">Bow out?</div>
+									</div>
+ 								</div>
+							</div>
+
+							<div class="row circleMember">
+								<div class="col-md-3 memberImage">
+									<img src="less/img/circles_pics/wolverine.jpg" alt="Wolverine">
+								</div>
+								
+								<div class="col-md-9 memberPanel">
+									<div class="col-md-12 memberName">Wolverine</div>
+									<div class="col-md-5 memberControls">
+										<div type="button" class="btn btn-primary scope">Hobbies & Interests</div>
+									</div>
+									<div class="col-md-5">
+										<div type="button" class="btn btn-primary message">
+											<span class="fa fa-edit"></span>Write a message
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div type="button" class="btn btn-primary del">Bow out?</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="row circleMember">
+								<div class="col-md-3 memberImage">
+									<img src="less/img/circles_pics/jack_sparrow.jpg" alt="Jack Sparrow">
+								</div>
+								
+								<div class="col-md-9 memberPanel">
+									<div class="col-md-12 memberName">Jack Sparrow</div>
+									<div class="col-md-5 memberControls">
+										<div type="button" class="btn btn-primary scope">Hobbies & Interests</div>
+									</div>
+									<div class="col-md-5">
+										<div type="button" class="btn btn-primary message">
+											<span class="fa fa-edit"></span>Write a message
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div type="button" class="btn btn-primary del">Bow out?</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row circleMember">
+								<div class="col-md-3 memberImage">
+									<img src="less/img/circles_pics/phoebe.jpg" alt="Phoebe">
+								</div>
+								
+								<div class="col-md-9 memberPanel">
+									<div class="col-md-12 memberName">Phoebe</div>
+									<div class="col-md-5 memberControls">
+										<div type="button" class="btn btn-primary scope">Friendship & roommates</div>
+									</div>
+									<div class="col-md-5">
+										<div type="button" class="btn btn-primary message">
+											<span class="fa fa-edit"></span>Write a message
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div type="button" class="btn btn-primary del">Bow out?</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row circleMember">
+								<div class="col-md-3 memberImage">
+									<img src="less/img/circles_pics/rachel.jpg" alt="Rachel">
+								</div>
+								
+								<div class="col-md-9 memberPanel">
+									<div class="col-md-12 memberName">Rachel</div>
+									<div class="col-md-5 memberControls">
+										<div type="button" class="btn btn-primary scope">Friendship & roommates</div>
+									</div>
+									<div class="col-md-5">
+										<div type="button" class="btn btn-primary message">
+											<span class="fa fa-edit"></span>Write a message
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div type="button" class="btn btn-primary del">Bow out?</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row circleMember">
+								<div class="col-md-3 memberImage">
+									<img src="less/img/circles_pics/invisible_man.jpg" alt="Invisible man">
+								</div>
+								
+								<div class="col-md-9 memberPanel">
+									<div class="col-md-12 memberName">Invisible man</div>
+									<div class="col-md-5 memberControls">
+										<div type="button" class="btn btn-primary scope">Co-working & start-ups</div>
+									</div>
+									<div class="col-md-5">
+										<div type="button" class="btn btn-primary message">
+											<span class="fa fa-edit"></span>Write a message
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div type="button" class="btn btn-primary del">Bow out?</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row circleMember">
+								<div class="col-md-3 memberImage">
+									<img src="less/img/circles_pics/stub_picIcon.jpg" alt="Someone">
+								</div>
+								
+								<div class="col-md-9 memberPanel">
+									<div class="col-md-12 memberName">Someone</div>
+									<div class="col-md-5 memberControls">
+										<div type="button" class="btn btn-primary scope">Co-working & start-ups</div>
+									</div>
+									<div class="col-md-5">
+										<div type="button" class="btn btn-primary message">
+											<span class="fa fa-edit"></span>Write a message
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div type="button" class="btn btn-primary del">Bow out?</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row circleMember">
+								<div class="col-md-3 memberImage">
+									<img src="less/img/circles_pics/stub_picIcon.jpg" alt="Someone">
+								</div>
+								
+								<div class="col-md-9 memberPanel">
+									<div class="col-md-12 memberName">Someone</div>
+									<div class="col-md-5 memberControls">
+										<div type="button" class="btn btn-primary scope">Co-working & start-ups</div>
+									</div>
+									<div class="col-md-5">
+										<div type="button" class="btn btn-primary message">
+											<span class="fa fa-edit"></span>Write a message
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div type="button" class="btn btn-primary del">Bow out?</div>
+									</div>
+								</div>
+							</div> -->
+
+					<!-- 	</section>
+				</div>	 -->
+
+
+
+
+				<!-- <div class="container-fluid myCircles findPeople">
+						<section class="row findPeople">
+							<div class="row addMember">
+								<div class="col-md-3 memberImage">
+									<img src="less/img/circles_pics/spartan.jpg" alt="Spartan">
+								</div>
+
+								<div class="col-md-9 memberPanel">
+									<div class="col-md-12 memberName">Spartan</div>
+									<div class="col-md-5 memberControls">
+										<div type="button" class="btn btn-primary scope">Hobbies & Interests</div>
+									</div>
+									<div class="col-md-5">
+										<div type="button" class="btn btn-primary message">
+											<span class="fa fa-edit"></span>Write a message
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div type="button" class="btn btn-primary del">Add</div>
+									</div>
+ 								</div>
+							</div>
+
+							<div class="row addMember">
+								<div class="col-md-3 memberImage">
+									<img src="less/img/circles_pics/wolverine.jpg" alt="Wolverine">
+								</div>
+								
+								<div class="col-md-9 memberPanel">
+									<div class="col-md-12 memberName">Wolverine</div>
+									<div class="col-md-5 memberControls">
+										<div type="button" class="btn btn-primary scope">Hobbies & Interests</div>
+									</div>
+									<div class="col-md-5">
+										<div type="button" class="btn btn-primary message">
+											<span class="fa fa-edit"></span>Write a message
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div type="button" class="btn btn-primary del">Add</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="row addMember">
+								<div class="col-md-3 memberImage">
+									<img src="less/img/circles_pics/jack_sparrow.jpg" alt="Jack Sparrow">
+								</div>
+								
+								<div class="col-md-9 memberPanel">
+									<div class="col-md-12 memberName">Jack Sparrow</div>
+									<div class="col-md-5 memberControls">
+										<div type="button" class="btn btn-primary scope">Hobbies & Interests</div>
+									</div>
+									<div class="col-md-5">
+										<div type="button" class="btn btn-primary message">
+											<span class="fa fa-edit"></span>Write a message
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div type="button" class="btn btn-primary del">Add</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row addMember">
+								<div class="col-md-3 memberImage">
+									<img src="less/img/circles_pics/phoebe.jpg" alt="Phoebe">
+								</div>
+								
+								<div class="col-md-9 memberPanel">
+									<div class="col-md-12 memberName">Phoebe</div>
+									<div class="col-md-5 memberControls">
+										<div type="button" class="btn btn-primary scope">Friendship & roommates</div>
+									</div>
+									<div class="col-md-5">
+										<div type="button" class="btn btn-primary message">
+											<span class="fa fa-edit"></span>Write a message
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div type="button" class="btn btn-primary del">Add</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row addMember">
+								<div class="col-md-3 memberImage">
+									<img src="less/img/circles_pics/rachel.jpg" alt="Rachel">
+								</div>
+								
+								<div class="col-md-9 memberPanel">
+									<div class="col-md-12 memberName">Rachel</div>
+									<div class="col-md-5 memberControls">
+										<div type="button" class="btn btn-primary scope">Friendship & roommates</div>
+									</div>
+									<div class="col-md-5">
+										<div type="button" class="btn btn-primary message">
+											<span class="fa fa-edit"></span>Write a message
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div type="button" class="btn btn-primary del">Add</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row addMember">
+								<div class="col-md-3 memberImage">
+									<img src="less/img/circles_pics/invisible_man.jpg" alt="Invisible man">
+								</div>
+								
+								<div class="col-md-9 memberPanel">
+									<div class="col-md-12 memberName">Invisible man</div>
+									<div class="col-md-5 memberControls">
+										<div type="button" class="btn btn-primary scope">Co-working & start-ups</div>
+									</div>
+									<div class="col-md-5">
+										<div type="button" class="btn btn-primary message">
+											<span class="fa fa-edit"></span>Write a message
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div type="button" class="btn btn-primary del">Add</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row addMember">
+								<div class="col-md-3 memberImage">
+									<img src="less/img/circles_pics/stub_picIcon.jpg" alt="Someone">
+								</div>
+								
+								<div class="col-md-9 memberPanel">
+									<div class="col-md-12 memberName">Someone</div>
+									<div class="col-md-5 memberControls">
+										<div type="button" class="btn btn-primary scope">Co-working & start-ups</div>
+									</div>
+									<div class="col-md-5">
+										<div type="button" class="btn btn-primary message">
+											<span class="fa fa-edit"></span>Write a message
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div type="button" class="btn btn-primary del">BAdd</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row addMember">
+								<div class="col-md-3 memberImage">
+									<img src="less/img/circles_pics/stub_picIcon.jpg" alt="Someone">
+								</div>
+								
+								<div class="col-md-9 memberPanel">
+									<div class="col-md-12 memberName">Someone</div>
+									<div class="col-md-5 memberControls">
+										<div type="button" class="btn btn-primary scope">Co-working & start-ups</div>
+									</div>
+									<div class="col-md-5">
+										<div type="button" class="btn btn-primary message">
+											<span class="fa fa-edit"></span>Write a message
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div type="button" class="btn btn-primary del">Add</div>
+									</div>
+								</div>
+							</div>
+
+						</section>
+				</div> -->
+
+
+		<!-- 		</div> -->
+			</main>	
+	
+	</div>
+<!-- 	</div> -->
+<script type="text/javascript" src="js/SPA.js"></script>
+</body>
+</html>

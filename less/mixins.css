@@ -1,0 +1,215 @@
+.mainFont {
+  font-family: "Arial";
+  font-size: 13px;
+}
+.loginFormMixin {
+  display: inline-block;
+  width: 100%;
+  margin-left: 22px;
+  font-family: "Arial";
+  font-size: 13px;
+}
+.loginFormMixin .login,
+.loginFormMixin .password {
+  display: inline-block;
+  box-sizing: border-box;
+  float: left;
+  width: 200px;
+  margin-right: 10px;
+  margin-bottom: 14px;
+}
+.loginFormMixin .login input,
+.loginFormMixin .password input,
+.loginFormMixin .login label,
+.loginFormMixin .password label {
+  display: block;
+  padding-left: 7px;
+  margin-bottom: 7px;
+}
+.loginFormMixin .login label,
+.loginFormMixin .password label {
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 10px;
+}
+.loginFormMixin .login label a,
+.loginFormMixin .password label a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.loginFormMixin .login label a:hover,
+.loginFormMixin .password label a:hover,
+.loginFormMixin .login label a:focus,
+.loginFormMixin .password label a:focus {
+  color: #ff9900;
+}
+.loginFormMixin .login .rememberMe,
+.loginFormMixin .password .rememberMe,
+.loginFormMixin .login .forgotPass,
+.loginFormMixin .password .forgotPass {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+.loginFormMixin .loginAsMember {
+  display: inline-block;
+  float: left;
+  width: 75px;
+  box-sizing: border-box;
+}
+.loginFormMixin .loginAsMember button {
+  display: inline-block;
+  line-height: 1.1em;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 6px 4px 6px 4px;
+  text-transform: uppercase;
+}
+.loginFormMixin .loginAsMember button span {
+  font-family: "Arial Narrow";
+  font-size: 10px;
+  text-transform: none;
+}
+.loginFormMixin .loginAsMember .logButtStyle {
+  background-color: rgba(255, 153, 0, 0.66);
+  color: #ffffff;
+  text-align: center;
+  border: 1px trasparent #ffffff;
+  border-radius: 3px;
+}
+.loginFormMixin .loginAsMember .logButtStyle a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.registrationFormMixin {
+  padding: 15px 23px 10px 23px;
+  border-radius: 7px;
+  background-color: rgba(255, 153, 0, 0.66);
+  margin-left: 233px;
+}
+.registrationFormMixin h3 {
+  margin: 0 auto;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 17px;
+  color: #6e3095;
+  text-align: center;
+}
+.registrationFormMixin label {
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 10px;
+  margin-bottom: 7px;
+}
+.registrationFormMixin input,
+.registrationFormMixin select,
+.registrationFormMixin button {
+  width: 100%;
+  padding-left: 7px;
+  margin-bottom: 7px;
+}
+.registrationFormMixin .sexOrient {
+  display: inline-block;
+  width: 48.75%;
+  padding: 3px;
+}
+.registrationFormMixin .register {
+  background-color: #6e3095;
+  border: none;
+  border-radius: 3px;
+  height: 26px;
+  color: #ff9900;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.registrationFormMixin .register a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.registrationFormMixin p {
+  font-size: 9px;
+  color: #ffffff;
+  text-align: center;
+}
+.SPAHeaderStyle {
+  width: 100%;
+  height: auto;
+  background-color: #6e3095;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 7px 21px -1px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: 0px 7px 21px -1px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 7px 21px -1px rgba(0, 0, 0, 0.42);
+}
+.col-xs-12 {
+  margin: 0 auto;
+  text-align: center;
+}
+.navWrapperMixin {
+  position: relative;
+  margin: 0 auto;
+  min-width: 100%;
+  min-height: 100%;
+}
+.mainNavBasics {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Arial";
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 20px;
+}
+.mainNavBasics ul {
+  list-style-position: outside;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #ff9900;
+}
+.mainItems,
+.mainItems a {
+  width: 100%;
+  display: block;
+  list-style: none;
+  text-decoration: none;
+  text-align: left;
+}
+.mainItems .badge,
+.mainItems a .badge {
+  background-color: white;
+  color: #ff9900;
+  margin: 0px 3px 0px 9px;
+}
+.mainItems .fa-envelope,
+.mainItems a .fa-envelope,
+.mainItems .fa-users,
+.mainItems a .fa-users,
+.mainItems .fa-gear,
+.mainItems a .fa-gear {
+  margin: 0px 9px 0px 3px;
+}
+.mainItems {
+  padding-left: 50px;
+}
+.gradNavLinks {
+  color: #ffffff;
+  padding: 15px 0px 15px 30px;
+  background: linear-gradient(to bottom, #ff9900 0%, #febc5b 100%);
+}
+.mainNavHov,
+.mainNavAct,
+.mainNavFocus {
+  background: #6e3095;
+  text-decoration: none;
+  color: #ffffff;
+}
+.mediaCirclesDisplayMixin .memberName,
+.mediaCirclesDisplayMixin .memberImage {
+  text-align: center;
+}
+.mediaCirclesDisplayMixin .col-md-5,
+.mediaCirclesDisplayMixin .col-md-2 {
+  margin: 7px 0px 7px 0px;
+  width: 100%;
+}

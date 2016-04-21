@@ -1,0 +1,1100 @@
+@import (reference) "variables.less";
+
+.mainFont{
+	font-family: @mainFont;
+	font-size: 13px;
+}
+
+
+//mixins for main page
+
+//for header
+
+.mainLogoFont () {
+	display: block;
+	// margin: 77px 0px 44px 0px;
+	margin: 11px 0px 22px 0px;
+	font-family: 'DS StandartCyr';
+	font-size: 77px;
+    text-align: left;
+    color: @accentColor;
+    .logoDomain {
+		font-size: 44px;
+	}
+}
+.sloganStyle () {
+	display: block;
+	margin-bottom: 22px;
+	font-family: Arial;
+	font-size: 33px;
+	text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: @highlight;
+    width: 100%;
+}
+
+.descrStyle() {
+	display: block;
+	font-family: @narrowFont, Arial, sans-serif; 	
+	font-size: 20px;
+	color: @highlight;
+	text-align: left;
+	width: 100%;
+}
+
+.pageWrapperMixin() {
+	position: relative;
+	margin: 0 auto;
+  	min-width: 100%;
+  	min-height: 100%;
+}
+
+.footerWrapperMixin() {
+	// position: relative;
+	/*этот контейнер дублирует общий контейнер wrap с позиционированием relative,
+	но при этом добляет педдинг непосредственно под футер и защищает его от влияния текста контента*/
+	margin: 0 auto;
+	min-height: 100%;
+	/*именно min-height, иначе при обычном свойстве height:100; контент перекроет футер*/
+	padding-bottom: 10px;
+	/*чтобы футер был прижат, нам обязательно необходимо указать для него именно фиксированную высоту, а основному диву контента добавить свойство padding-bottom:75px (конкретно то фиксированное значение, которое мы выбрали для высоты футера)*/
+}
+
+.footerStyleMixin() {
+	// position: absolute;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+	height: auto;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 70px 35px 42px 75px;
+	display: inline-block;
+	text-align: left;
+	/*чтобы футер был прижат, нам обязательно необходимо указать для него именно фиксированную высоту, а основному диву контента добавить свойство padding-bottom:75px (конкретно то фиксированное значение, которое мы выбрали для высоты футера)*/
+	background-color: @mainColorTransp;
+	clear:both;	
+}
+
+.headWrapperMixin() {
+	display: block;
+	// overflow: hidden;
+	width: 100%;
+	margin: 0 auto;
+	text-align: left;
+	word-wrap: break-word;
+	height: auto;
+	margin: auto;
+	box-sizing: border-box;
+}
+
+.headerContentMixin() {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	.headerBg {
+		background: url("img/starry_background_light.jpg");
+		background-position: top left;
+		background-repeat: auto;
+		background-size: contain; 
+		z-index: -2;
+		.headerContainer {
+			width: 100%;
+			padding: 22px 70px 15px 70px;
+			display: inline-block;
+			margin: 0 auto;
+			// width: 100%;
+		} 
+	}
+}
+
+
+.adContentMixin() {
+	display: inline-block;
+	float: left;
+	width: 674px;
+	padding: 0px 10px 0px 5px;
+	box-sizing: border-box;
+	z-index: 2;
+	.logo {
+		.mainLogoFont;
+	}
+
+	h1.slogan {
+		.sloganStyle();
+	}
+
+	h2 {
+		.descrStyle()
+	}	
+}
+
+.formsMixin() {
+	display: inline-block;
+	float: right;
+	z-index: 2;
+	width: 520px;
+	padding-right: 20px;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: @mainFont;
+	overflow: hidden;
+}
+
+.loginFormMixin {
+	display: inline-block;
+	width: 100%;
+	margin-left: 22px;
+	.mainFont();
+
+	.login, .password {
+		display: inline-block;
+		box-sizing: border-box;
+		float: left;
+		width: 200px;
+		margin-right: 10px;
+		margin-bottom: 14px;
+		input, label {
+			display: block;
+			padding-left: 7px;
+			margin-bottom: 7px;
+		}
+		label {
+			color: @highlight;
+			font-size: 12px;
+			line-height: 10px;
+			a {
+				text-decoration: none;
+				color: @highlight;
+			}
+			a:hover, a:focus {
+				color: @accentColor;
+			}
+		}	
+
+		.rememberMe, .forgotPass {
+			display: inline-block;
+			padding: 0;
+			margin: 0;
+		}					
+	}
+	.loginAsMember {
+		display: inline-block;
+		float: left;
+		width: 75px;
+		box-sizing: border-box;
+		button {
+			display: inline-block;
+			line-height: 1.1em; 	
+			font-weight: bold;
+			font-size: 15px;
+			padding: 6px 4px 6px 4px;
+			text-transform: @capslock;
+			span {
+				font-family: @narrowFont;
+				font-size: 10px;
+				text-transform: none;
+			}
+		}
+		.logButtStyle {
+			background-color: @accentColorTransp;
+			color: @highlight;
+			text-align: center;
+			border: 1px trasparent @highlight;
+			border-radius: 3px;
+			& a {
+				color: @highlight;
+				text-decoration: none;
+			}
+		}	
+	}	
+}
+
+.registrationFormMixin {
+	// width: 283px;
+	// height: 386px;
+	padding: 15px 23px 10px 23px;
+	border-radius: 7px;
+	background-color: @accentColorTransp;
+	margin-left: 233px;
+	h3 {
+		margin: 0 auto;
+		padding-bottom: 10px;
+		text-transform: @capslock;
+		font-weight: bold;
+		font-size: 17px;
+		color: @mainColor;
+		text-align: center;
+	}
+
+	label {
+		color: @highlight;
+		font-size: 15px;
+		line-height: 10px;
+		margin-bottom: 7px;
+	}
+
+	input, select, button {
+		// display: block;
+		width: 100%;
+		padding-left: 7px;
+		margin-bottom: 7px;
+	}
+
+	.sexOrient {
+		display: inline-block;
+		width: 48.75%;
+		padding: 3px; 
+	}	
+
+	.register {
+		background-color: @mainColor;
+		border: none;
+		border-radius: 3px;
+		height: 26px;
+		color: @accentColor;
+		font-size: 14px;
+		text-transform: @capslock;
+		& a {
+			text-decoration: none;
+			color: @highlight;
+		}
+	}
+
+	p {
+		font-size: 9px;
+		color: @highlight;
+		text-align: center;
+	}
+}
+
+//mixins for navigation bar
+
+.horizontalNavMixin() {
+	background-color: @mainColor;
+	border: none;
+	border-radius: none;
+	margin: 0 auto;
+	padding: 5px 35px 5px 17px;
+	// margin-bottom: 39px;
+	margin-bottom: 22px;
+	font-family: @mainFont;
+	font-size: 17px;
+	color: @highlight;
+	text-transform: @capslock;
+	.nav li a {
+		color: @highlight;
+		border-bottom: none;
+	}
+	.nav li a:focus, .nav li a:hover, .nav li a:active {
+		background-color: @accentColorTransp;
+		border: none;
+	}
+}
+
+//mixins for main content
+
+.carouselMixin() {
+	position: relative;
+	bottom: 15px;
+
+	li {
+		background-color: @accentColor;
+	}
+
+	& .active {
+		background-color: @mainColor;
+	}
+}
+
+.mediaCarouselMixin() {
+	bottom: 0px;
+}
+
+.descrTextMixin() {
+	h2 {
+		color: @textColor;
+		font-weight: bold;
+		font-size: 17px;
+		text-transform: @capslock;
+		// margin-bottom: 30px;
+		margin-bottom: 20px;
+	}
+
+	p {
+		color: @textColor;
+		font-size: 16px;
+		text-align: justify;
+		margin-bottom: 44px;
+	}
+
+}
+
+.scopeGalleryMixin() {
+	padding: 0px;
+	border: 0px;
+
+	.thumbnail {
+		margin-bottom: 10px;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	img:hover {
+		transform: scale(1.025, 1.025);
+		z-index: 10;
+		-webkit-box-shadow: @scopesImgShadow;
+		-moz-box-shadow: @scopesImgShadow;
+		box-shadow: @scopesImgShadow;
+		border-radius: 9px;
+	}
+
+	.caption {
+		font-size: 12px;
+		text-align: center;
+		color: @mainColor;
+	}
+
+	.btns {
+		text-align: center;
+		margin-bottom: 10px;
+	}
+
+	.btn-primary {
+		background-color: @accentColor;
+		border: none;
+	}
+
+	.btn-primary:focus,
+	.btn-primary.focus,
+	.btn-primary:hover,
+	.btn-primary:active,
+	.btn-primary.active,
+	.btn-primary:active:hover,
+	.btn-primary.active:hover {
+		color: @highlight;
+		background-color: @mainColor;
+		border: none;
+	} 
+}
+
+//mixins for footer
+
+.footerStyleMixin() {
+
+	.footerMenuWrap {
+		// width: 1300px;
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+	}
+
+	.row {
+		padding: 0px 40px 0px 15px;
+	}
+	.socialize .col-md-6, .col-md-6 {
+		text-align: right;
+	}
+	
+	a {
+		text-decoration: none;
+		color: @highlight;
+	}
+	a:hover, a:focus, a:active {
+		color: @accentColor;
+	}
+
+	.footerContent {
+		i {
+			color: @highlight;
+			font-size: 27px;
+		}
+
+		h5 {
+			font-weight: bold;
+			text-transform: @capslock;
+			color: @accentColor;
+			margin-bottom: 7px;
+		}
+
+		.list-group-item {
+			background-color: @absoluteTransp;
+			color: @highlight;
+			border: none;
+			margin-bottom: 0px;
+			padding: 0px 0px 3px 0px;
+			}
+
+		.socialize .list-group-item {
+			display: inline-block;
+			padding-right: 2px;	
+		}
+	}
+
+	.copyright {
+		color: @highlight;
+		font-size: 12px;
+		padding-top: 12px;
+	}
+}
+
+//main.html mixins for media queries
+//max-width: 1300px
+
+	.mediaHeaderBackgroundMixin() {
+		width: 100%;
+		margin: 0 auto;
+	    background: url("img/starry_background_light.jpg");
+	    background-position: center;
+	    background-size: 200% 100%;
+	}
+
+	.mediaHeaderContainer() {
+			width: 100%;
+			margin: 0 auto;
+			// width: 100%;
+		
+	}
+
+	.mediaFooterStyle() {
+
+		.footerMenuWrap {
+			width: 100%;
+			height: auto;
+			margin: 0 auto;
+		}
+
+		.col-md-6 {
+				text-align: center;
+			}
+
+			display: block;
+			text-align: center;
+			h5 {
+				margin-bottom: 0px;
+			}
+			.list-group {
+				margin-bottom: 25px;
+			}
+			.list-group-item {
+				padding-bottom: 3px;
+			}
+	}
+
+	.mediaHeaderContainerMixin() {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		float: none;
+
+		.adContent {
+			width: auto;
+			display: block;
+			float: none;
+		
+			.logo {
+				margin-top: 22px;
+				font-size: 2.75em;
+				span.logoDomain {
+						font-size: 0.75em;
+				}
+			}
+
+			h1.slogan {
+				font-size: 1.5em;
+			}
+
+			h2.projectDescr {
+				font-size: 1.1em;
+			}
+
+			.logo, h1.slogan, h2.projectDescr {
+				text-align: center;
+				width: auto;
+			}
+		}
+
+		.forms {
+			overflow: hidden;
+			display: block;
+			margin: 0 auto;
+			float: none;
+			width: 100%;
+			padding-top: 35px;
+		}
+			
+		.loginForm {
+			margin: 0 auto;
+			padding: 0px;
+			float: none;
+
+			.login, .password, .loginAsMember  {
+				display: block;
+				float: none;
+				margin: 0 auto;
+				text-align: center;
+				padding-bottom: 7px;
+			}
+					
+		}
+
+		
+		.registration {
+			height: auto;
+			font-size: 0.9em;
+			margin: 0 auto;
+			width: 100%;
+			height: auto;
+				h3 {
+					font-size: 1.0em;
+				}
+				input, input.value, label {
+					display: inline-block;
+					width:100%;
+					margin: auto;
+					padding-bottom: 5px;
+					font-size: 0.8em;
+				}
+				button {
+					font-size: 1.1em;
+				}
+			margin-top: 15px;	
+		}
+	}		
+
+
+//mixins for SPA
+//for page wrapper
+.wrapBasics () {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	margin: 0 auto;
+	.mainFont;
+	overflow: hidden;
+/*именно min-height, иначе при обычном свойстве height:100; контент перекроет футер*/
+}
+
+//for SPA header
+
+.SPAHeaderStyle {
+	width: 100%;
+	height: auto;
+	background-color: @mainColor;
+	box-sizing: border-box;
+	-webkit-box-shadow: @horizShadow;
+	-moz-box-shadow: @horizShadow;
+	box-shadow: @horizShadow;
+}
+
+.SPALogoFont () {
+	display: block;
+	margin: 27px 0px 27px 30px;
+	font-family: 'DS StandartCyr';
+	font-size: 37px;
+    text-align: left;
+    color: @accentColor;
+    font-weight: bold;
+    .logoDomain {
+		font-size: 23px;
+	}
+}
+
+.col-xs-12 {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.headerLinkMixin() {
+	text-decoration: none;
+	color: @highlight;
+}
+
+.headerActiveLinkMixin() {
+	color: @accentColor;
+}	
+
+.backHomeMixin() {
+	margin: 27px 50px 27px 0px;
+	text-align: right;
+
+		.fa-home {
+			color: @highlight;
+			font-size: 30px;
+			margin-right: 35px;
+			padding: 3px 3px 3px 3px;
+			display: inline-block;
+			vertical-align: top;
+			&:hover, &:active, a:focus {
+				border: 2px solid @highlight;
+				border-radius: 33px;
+			}	
+		}
+
+		.user {
+			margin-right: 13px;
+			margin-top: 3px;
+			display: inline-block;
+		}
+
+		.fa-user {
+			color: @accentColor;
+			font-size: 21px;
+			margin-right: 15px;
+			display: inline-block;
+		}
+
+		.userName {
+			color: @accentColor;
+			font-size: 20px;
+			margin-bottom: 7px;
+			display: inline-block;
+		}
+
+		.logOut {
+			color: @highlight;
+			font-size: 11px;
+			text-transform: @capslock;
+			a {
+				.headerLinkMixin();
+			}
+
+			a:hover, a:focus {
+				.headerActiveLinkMixin();
+			}
+		}		
+	}
+
+.mediaHeaderMixin() {
+	.logo {
+			text-align: center;
+			margin-left: 0px;
+			margin-bottom: 10px;
+		}
+
+		.backHome {
+			margin: 10px 33px 27px 0px;
+			.fa-home {
+				font-size: 22px;
+				margin-right: 15px;		
+			}
+
+			.user {
+				margin-right: 17px;
+			}
+
+			.fa-user {
+				font-size: 17px;
+				margin-right: 15px;
+			}
+
+			.userName {
+				font-size: 17px;
+				margin-bottom: 7px;
+			}
+
+			.logOut {
+				font-size: 11px;
+			}		
+		}
+}
+
+//for SPA navigation side
+
+.navWrapperMixin {
+	position: relative;
+	margin: 0 auto;
+  	min-width: 100%;
+  	min-height: 100%;
+}
+
+.leftMask () {
+	position: absolute;
+	width: 222px; //305px or 22.63%
+	min-height: 100%;
+	left: 0;
+	top: 0;
+	background-color: @mainColorTransp;
+	z-index: -1;
+	.mnShadow;
+    
+}
+.navBasics () {
+	// position: relative;
+	position: absolute;
+    width: 222px; //305px or 22.63%
+    height: 100%;
+    float: left;
+    z-index: 1;
+    // overflow: hidden;
+    // background-color: @accentColor;
+	// .subShadow; //пока есть маска с тенью эту можно деактивировать, чтобы не было наложения тени на тень;
+   
+}
+
+.mainNavBasics {
+    	color: @highlight;
+    	text-transform: uppercase;
+    	font-family: @mainFont;
+    	font-size: 14px;
+    	font-weight: 200;
+    	line-height: 20px;
+    	ul {
+    		list-style-position: outside;
+    		list-style-type: none;
+    		padding: 0px;
+    		margin: 0 auto;
+    		width: 100%;
+    		background-color: @accentColor;
+    	}	
+}
+
+.mainItems, .mainItems a {
+	width: 100%;
+	display: block;
+	list-style: none;
+	text-decoration: none;
+	text-align: left;
+    // padding-left: 50px;
+    .badge {
+		background-color: white;
+		color: @accentColor;
+		margin: 0px 3px 0px 9px;
+	}
+
+	.fa-envelope, .fa-users, .fa-gear {
+		margin: 0px 9px 0px 3px;
+	}
+}
+
+.mainItems {
+	padding-left: 50px;
+}
+.gradNavLinks {
+    color: @highlight;
+    padding: 15px 0px 15px 30px;
+    background: @navGradient;   
+}
+
+
+.mainNavHov, .mainNavAct, .mainNavFocus {
+	background: @mainColor;
+	text-decoration: none;
+	color: @highlight;
+}
+   
+
+.mediaDropdownMixin() {
+  	.mainNavBasics();
+  	ul {
+  		padding: 0px;
+  	}
+  	display: block;
+	width: 100%;
+	height: auto;
+	position: relative;
+	text-align: center;
+
+	li, a {
+			padding-left: 0px;
+			text-align: center;
+		.fa-navicon {
+			font-size: 33px;
+			padding: 15px 0px 15px 0px;
+		}
+  	}	
+} 
+
+.mnShadow() {
+	-webkit-box-shadow: @verticalShadow;
+	-moz-box-shadow: @verticalShadow;
+	box-shadow: @verticalShadow;
+}
+
+.subShadow() {
+	-webkit-box-shadow: @verticalShadowTransp;
+	-moz-box-shadow: @verticalShadowTransp;
+	box-shadow: @verticalShadowTransp;
+}
+
+//for SPA content
+
+.contentMixin() {
+	margin-left: 225px;
+	padding: 30px 20px 30px 10px;
+}
+
+.galleryMixin() {
+	margin: 0px;
+	padding: 7px 15px 5px 15px;
+	.profilePic  {
+		margin: 9px 0px 0px 0px;
+	} 
+
+	.mainPic { 
+		// width: 210px;
+		// height: 268px;
+		width: 172px;
+		height: 230px;
+	}
+}
+
+.picIconsMixin() {
+	padding: 0px 0px 0px 25px;
+	// text-align: right;
+}
+
+.picIconMixin() {
+	padding: 7px 7px 7px 7px;
+	// text-align: right;
+	img {
+		// width: 165px;
+		// height: 130px;
+		width: 135px;
+		height: 110px;
+		background-color: @lightgrey;
+	}
+}
+
+
+.mediaGalleryRowMixin() {
+	margin: 0px auto;
+
+		.col-lg-1 {
+			padding: 0px 7px 0px 7px;
+		}
+		.profilePic  {
+			margin-bottom: 10px;
+		} 
+
+		.mainPic {
+			width: 150px;
+			height: 198px;
+		}
+
+		.picIconsGallery {
+			padding-left: 7px;
+			.picIconsRow {
+				margin: 0 auto;
+				padding: 0px;
+			}
+
+			.iconsWrap {
+				margin: 0 auto;
+			}
+
+			.picIcon {
+				img {
+					width: 110px;
+					height: 90px;
+				}
+			}
+		}
+}
+
+.profileDescrMixin() {
+	padding: 7px 15px 5px 15px;
+	margin: 0 auto;
+	h2 {
+		font-size: 15px;
+		color: @highlight;
+		text-transform: @capslock;
+		font-weight: bold;
+		text-align: center;
+		padding: 7px 7px 5px 7px;
+		margin: 0 auto;
+		margin-bottom: 10px;
+		background-color: @accentColor;
+	} 
+
+	.briefInfo, .aboutTitle {
+		// width: 50%;
+		box-sizing: border-box;
+		padding: 0px;
+		// margin: 0px 7px 0px 10px;
+	}
+
+	.briefInfo {
+		text-align: left;
+	}
+
+	.descrQuest, .descrReply {
+		margin: 10px 0px 10px 0px;
+		color: @textColor;
+		font-size: 13px;
+		text-align: justify;
+	}
+
+	.briefInfoItems, .interests {
+		padding: 0px 3px 10px 7px;
+	}
+
+	.aboutInfo {
+		padding: 0px;
+		margin-top: 10px;	
+		.aboutTitle {
+			display: block;
+		}
+
+		.aboutText {
+			display: block;
+			font-size: 13px;
+			text-align: justify;
+			padding: 0px 7px 0px 7px;
+		}
+	}
+
+	.interests {
+		// width: 50%;
+		// padding: 0px 0px 0px 15px;
+		.tags {
+			margin: 0 auto;
+			padding: 7px 10px 7px 10px;
+			text-align: justify;
+		}
+		.btn-primary {
+			background-color: @textColor;
+			font-size: 12px;
+			border: none;
+			padding: 6px 7px 6px 7px;
+			margin: 3px 3px 3px 3px;
+				.fa-male, .fa-female {
+					padding: 0px 3px 0px 3px;
+				}
+		}		
+	}
+}	
+
+.mediaProfileDescrMixin() {
+
+	.briefInfo, .interests, .aboutInfo, .aboutTitle {
+		width: 100%;
+		padding: 0px 0px 0px 0px;
+		margin: 0 auto;
+	}
+
+}
+
+.selectScopesMixin() {
+	background-color: @accentColor;
+	color: @highlight;
+	border: 1px solid @accentColor;
+	width: 100%;
+	padding: 7px 7px 5px 7px;
+	margin-bottom: 10px;
+	text-align: center;
+	font-size: 17px;
+		& :first-child {
+			display: none;
+		}
+		option {
+			background-color: @highlight;
+			color: @textColor;
+		}
+}
+
+.mediaSelectScopesMixin() {
+	font-size: 12px;
+	& :first-child {
+		display: none;
+	}
+}
+
+.foundUsersMixin() {
+	padding: 2px 7px 5px 7px;
+	text-align: center;
+	color: @textColor;
+		.usersNum {
+			color: @accentColor;
+			font-weight: bold;
+			font-size: 22px;
+		}
+		.fa-users {
+			padding: 0px 0px 0px 7px;
+			font-size: 19px;
+		}	
+}
+
+.mediaFoundUsersMixin() {
+	.usersNum {
+		font-size: 17px;
+	}
+	.fa-users {
+		margin-top: 7px;
+		font-size: 15px;
+	}	
+}
+	
+.searchResetMixin() {
+	& .btn-primary {
+		background-color: @textColor;
+		width: 100%;
+		text-align: center;
+	}
+}	
+
+.mediaSearchResetMixin() {
+	& .btn-primary {
+		font-size: 12px;
+		word-wrap: break-word;
+	}
+}		
+
+
+.circlesDisplayMixin() {
+	.circleMember, .addMember {
+		margin: 10px 7px 15px 7px;
+				// margin: 0 auto;
+	}
+
+	.memberImage img {
+		width: 191px;
+		height: 157px;
+	}
+
+	.memberPanel {
+		margin: 30px 0px 0px 0px;
+	}	
+	
+	.memberName {
+		color: @textColor;
+		font-size: 22px;
+		font-weight: bold;
+		margin: 0px 0px 20px 0px;
+	}
+			
+	.memberPanel {
+		.btn-primary {
+			width: 100%;
+		}	
+	}
+				
+	.scope, .message {
+		background-color: @textColor;
+		border-color: @textColor;
+	}
+
+	.fa-edit {
+		font-size: 17px;
+		padding: 0px 9px 0px 0px;
+	}
+
+	.del {
+		background-color: @accentColor;
+			border-color: @accentColor;
+	}
+}
+
+.mediaCirclesDisplayMixin {
+	.memberName, .memberImage {
+		text-align: center;
+	}
+
+	.col-md-5, .col-md-2 {
+		margin: 7px 0px 7px 0px;
+		width: 100%;
+	}
+}

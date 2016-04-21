@@ -1,0 +1,14 @@
+{
+  "author": "Kseniya-Y",
+  "name": "Final-practice",
+  "version": "0.0.1",
+  "description": "Social Network Prototype",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-less": "^1.2.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}

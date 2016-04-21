@@ -1,0 +1,220 @@
+@import (reference) "mixins.less";
+@import (reference) "variables.less";
+@import (reference) "fonts/font-awesome.css";
+@font-face {
+    font-family: FontAwesome; /* Имя шрифта */
+    src: url(../fonts/fontawesome-webfont.ttf); /* Путь к файлу со шрифтом */
+    font-family: 'DS StandartCyr', Arial; /* Имя шрифта */
+    src: url(../fonts/dsstnd.ttf); /* Путь к файлу со шрифтом */
+   }
+
+
+.body {
+	margin: 0 auto;
+	min-height: 100%;
+}
+.pageWrapper {
+	.pageWrapperMixin();
+	@media all and (min-width: 1000px) {
+		max-width: 80%;
+	}
+}
+
+.footerWrapper {
+	.footerWrapperMixin();
+	// position: relative;
+	/*этот контейнер дублирует общий контейнер wrap с позиционированием relative,
+	но при этом добляет педдинг непосредственно под футер и защищает его от влияния текста контента*/
+	// margin: 0 auto;
+	// min-height: 100%;
+	/*именно min-height, иначе при обычном свойстве height:100; контент перекроет футер*/
+	// padding-bottom: 10px;
+	/*чтобы футер был прижат, нам обязательно необходимо указать для него именно фиксированную высоту, а основному диву контента добавить свойство padding-bottom:75px (конкретно то фиксированное значение, которое мы выбрали для высоты футера)*/
+}
+
+.clearfix {
+		clear: both;
+}
+
+.footerStyle {
+	.footerStyleMixin();
+}
+
+.headWrapper {
+	.headWrapperMixin();
+
+	.headContent  {
+		.headerContentMixin(); 
+	}  
+	
+	.adContent {
+		.adContentMixin();	
+	}
+
+	.forms {
+		.formsMixin();	
+	}
+
+	.loginForm {
+		.loginFormMixin();
+	}	
+
+	.registration {
+		.fa-chevron-circle-down {
+			color: @highlight;
+			font-size: 20px;
+			text-indent: 10px;
+		}
+		.registrationFormMixin();
+		.formDataWrapper {
+			display: none;
+		}
+	}
+
+}		
+
+.navbar {
+	border-radius: 0px;
+}
+
+.horizontalNav {
+	.horizontalNavMixin();
+}
+
+
+.mainContent {
+	margin: 0px 75px 42px 75px;
+}
+
+	.carousel-control.right {
+		background-image: linear-gradient(to right,rgba(0, 0, 0, 0) 0,rgb(110,48,149) 100%);
+	}
+
+	.carousel-control.left {
+		background-image: linear-gradient(to left,rgba(0, 0, 0, 0) 0,rgb(110,48,149) 100%);
+	}
+
+	.icon-next, .icon-prev {
+		font-size: 22px;
+	}
+
+	.carousel-indicators {
+		.carouselMixin();
+	}
+
+	
+	.hr {
+		height: 1px;
+		background-color: #909090;
+		margin: 30px 0px 30px 0px;
+	}
+
+	.serviceDescr, .scopesDescr {
+		.descrTextMixin();
+	}
+
+	.scopesGallery {
+		.row {
+			margin: 0 auto;
+			padding: 0px;
+		}
+	}
+
+	.col-sm-6, .col-md-2 {
+		padding: 3px;
+		margin: 0 auto;
+	}
+
+	.thumbnail {
+		.scopeGalleryMixin();
+	}
+
+.footerStyle {
+	.footerStyleMixin();
+}
+	
+//max-width: 400px означает, что ширина окна браузера меньше 400 пикселов, а min-width: 1000px, наоборот, сообщает, что ширина окна больше 1000 пикселов.	
+
+@media all and (max-width: 1300px) {
+		
+	
+		.headWrapper .headContent .headerBg {
+			.mediaHeaderBackgroundMixin();
+		}
+
+		.footerStyle {
+				padding: 30px 20px 30px 20px;
+		}
+
+		.headWrapper .headContent .headerBg .headerContainer {
+			padding: 22px 10px 15px 10px;
+			width: 100%;
+		}
+
+		.headerContainer {
+			.mediaHeaderContainerMixin();
+		}
+		
+		.mainContent {
+			margin: 0px 20px 42px 20px;
+			h2 {
+				text-align: center;
+			}
+
+			.carousel-indicators {
+			.mediaCarouselMixin();
+			}
+		}
+	
+		.col-main_size {
+			margin: 0 auto;
+		}
+	
+		.footerStyle {
+			.mediaFooterStyle();
+		}	   
+		
+}	
+
+@media all and (max-width: 1000px) {
+	
+		.lastchild {
+			float: none;
+			margin: 0 auto;
+			.thumbnail {
+			background-color: @absoluteTransp;
+			}
+		}
+}		
+
+
+//max-width: 400px означает, что ширина окна браузера меньше 400 пикселов, а min-width: 1000px, наоборот, сообщает, что ширина окна больше 1000 пикселов.
+
+@media all and (min-width: 1000px) {
+
+		// .carousel-indicators {
+		// 	.mediaCarouselMixin();
+		// }
+
+		// .headerContainer {
+		// 	display: block;
+		// 	margin: 0 auto;
+		// }
+
+		// .adContent {
+		// 	display: block;
+		// 	float: none;
+		// 	margin: 0 auto;
+		// }
+		.col-main_size {
+			width: 20%;
+		}
+}	
+
+
+// .overlay ::after {
+// 	 background-color: rgba(255,255,255,.75);
+// }
+
+
+
